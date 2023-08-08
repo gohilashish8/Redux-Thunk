@@ -1,0 +1,28 @@
+body {
+  background: #121212;
+}
+
+.spinner {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #7D5195 #7D5195 #7D5195 transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: spin 1.5s infinite;
+  position: relative;
+  margin: 0 auto;
+}
+
+.spinner:before {
+  top: 8px;
+}
+.spinner:after {
+  bottom: 8px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

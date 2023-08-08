@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
+import "./loading.css"
 import { incCount } from "./Services/Action/counterAction";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -12,7 +14,9 @@ function App() {
   return (
     <>
       <div className="card">
-        <button onClick={handleClick}> { isLoading ? "Loading..." :  `count is ${count}` }</button>
+        <button onClick={handleClick}>
+        { isLoading ? <div className="spinner"></div> :  `count is ${count}` }
+        </button>
       </div>
     </>
   );
